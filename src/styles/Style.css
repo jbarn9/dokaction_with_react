@@ -1,0 +1,128 @@
+@font-face {
+    font-family: aquagro;
+    src:
+      local("../assets/fonts/aqua.ttf"),
+      url("../assets/fonts/aqua.ttf");
+}
+:root{
+  --primary-color: #044652;
+  --secondary-color :#EBBA16; 
+  /* fonts */  
+  --primary-font: "aquagro", "inria sans", sans-serif;
+  --secondary-font: "inria sans", sans-serif;
+  /* font sizes */
+  --h1 : 2.3em;
+  --paragraph : 1.2em;
+  --h2 : 1.5em;
+  --h3 : 1.2em;
+}
+nav{
+    background: rgb(4,70,82);
+    background: linear-gradient(360deg, rgba(4,70,82,1) 57%, rgba(56,138,123,1) 90%); 
+    z-index: 0;
+}
+nav a, nav p{
+    font-family: var(--primary-font)!important;
+}
+a{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-family: var(--secondary-font);
+}
+    .dropdown-content a, .sidenav a{
+        color: black!important;
+        font-family: var(--secondary-font);
+    }
+   
+h1{
+    font-size: var(--h1);
+}
+h2{
+    font-size: var(--h2);
+}
+h3{
+    font-size: var(--h3);
+}
+.dropdown-trigger.btn{
+    margin-top: 30px; 
+    margin-right : 20px;
+    background-color: white;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+}
+.dropdown-content li > a{
+    margin-left: 20px;
+}
+
+.container-fluid {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+.title {
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+   /* BUTTONS */
+.btn_docation {
+    color: black;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+.btn_docation:after {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}  
+
+.btn_docation:hover:after {
+  top: 0px;
+  left: 0px;
+} 
+.btn_docation:focus{
+    background-color: transparent!important;
+}
+.container-fluid:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background-image:  url("../assets/img/lemur_connexion_page.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 800px;
+    background-position-x: 650px;
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 6;
+  }
+  
+  .image {
+    width: 100%;
+    transition: transform 1.1s ease-in-out;
+    transition-delay: 0.4s;
+  }
